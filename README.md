@@ -1,5 +1,5 @@
 # Tratt0re Portfolio App
-> It's my personal portfolio app, designed from scratch and developed through a strange magical ritual 🪄
+This is the source of my personal portfolio app, designed from scratch and developed through a strange magical ritual 🪄
 
 ## Check the site on 👇🏻
 [https://tratt0re.dev/](https://tratt0re.dev/)
