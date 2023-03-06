@@ -1,0 +1,32 @@
+{
+  "name": "tratt0re_portfolio_app",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Tratt0re/tratt0re_portfolio_app"
+  },
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "dependencies": {
+    "@chakra-ui/icons": "^2.0.17",
+    "@chakra-ui/react": "^2.5.1",
+    "@emotion/react": "^11.10.6",
+    "@emotion/styled": "^11.10.6",
+    "@fontsource/montserrat": "^4.5.14",
+    "@fontsource/roboto-mono": "^4.5.10",
+    "@fontsource/roboto-serif": "^4.5.12",
+    "eslint": "8.34.0",
+    "eslint-config-next": "13.2.1",
+    "framer-motion": "^10.0.0",
+    "next": "13.2.1",
+    "react": "18.2.0",
+    "react-dom": "18.2.0",
+    "react-icons": "^4.7.1",
+    "react-intersection-observer": "^9.4.3"
+  }
+}
