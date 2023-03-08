@@ -1,13 +1,8 @@
-import { Box, Center, Container, Flex } from "@chakra-ui/react";
-import Head from "next/head";
+import { Box, Flex } from "@chakra-ui/react";
 import { useEffect, useState } from "react";
 import NavigationBar from "./navigationbar/navigationbar";
-import { motion, AnimatePresence } from "framer-motion";
 import Menu from "./navigationbar/hamburgermenu/menu";
-const menuVariants = {
-    closed: { y: "100%" },
-    open: { y: 0 }
-};
+import Head from "next/head";
 
 export default function Layout({ children }) {
 
@@ -29,12 +24,34 @@ export default function Layout({ children }) {
     return (
         <Box as="layout">
             <Head>
+                <title>Salvatore De Luca | Mobile & FullStack Developer | Portfolio</title>
+
                 <meta name="viewport" content="width=device-width, initial-scale=1" />
-                <meta name="description" content="Tratt0re portfolio webpage" />
+                <meta name="description" content="Full-stack and mobile developer with experience in Swift, Node.js, React, and Python. Check out my portfolio!" />
                 <meta name="author" content="Salvatore De Luca" />
                 <meta name="author" content="Tratt0re" />
 
-                <title>Salvatore De Luca - Developer and spaghetti lover</title>
+                {/*Facebook - Linkedin - Other*/}
+                <meta property="og:title" content="Salvatore De Luca | FullStack & Mobile Developer | Portfolio" />
+                <meta property="og:description" content="Full-stack and mobile developer with experience in Swift, Node.js, React, and Python. Check out my portfolio!" />
+                <meta property="og:type" content="website" />
+                <meta property="og:image" content="https://tratt0re.dev/generic-og.png" />
+                <meta property="og:url" content="https://tratt0re.dev" />
+                <meta property="og:site_name" content="Salvatore De Luca Portfolio" />
+
+                {/*Twitter*/}
+                <meta name="twitter:title" content="Salvatore De Luca | FullStack & Mobile Developer | Portfolio" />
+                <meta name="twitter:description" content="Full-stack and mobile developer with experience in Swift, Node.js, React, and Python. Check out my portfolio!" />
+                <meta name="twitter:card" content="summary" />
+                <meta name="twitter:image" content="https://tratt0re.dev/twitter-og.png" />
+                <meta name="twitter:site" content="@tratt0re1" />
+                <meta name="twitter:url" content="https://tratt0re.dev" />
+
+                {/*iOS*/}
+                <link rel="apple-touch-icon" href="https://tratt0re.dev/apple-touch-icon.png" />
+
+                {/*Android*/}
+                <link rel="icon" sizes="192x192" href="https://tratt0re.dev/android-icon.png" />
             </Head>
 
             <NavigationBar toggleMenu={toggleMenu} />
