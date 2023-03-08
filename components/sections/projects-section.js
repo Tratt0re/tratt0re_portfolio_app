@@ -57,66 +57,57 @@ export default function ProjectsSection() {
         <Box
             id="projects"
             key="projects-section"
-            height={'100vh'}
-            scrollSnapAlign="start"
-            scrollSnapStop={"always"}
+            minH={'100vh'}
+            py={"106px"}
             ref={ref}
         >
-            <Box
-                py={"106px"}
-                height={'100%'}
-                overflowY="scroll"
-                css={{ '&::-webkit-scrollbar': { display: 'none' } }}
-            >
-                <VStack align={"start"} spacing={0} w='100%' overflowY={"scroll"}>
-                    <AnimatePresence>
-                        {
-                            isFirstComponentVisible && (
-                                <FadeInAnimation>
-                                    <SectionHeader title="Last projects" />
-                                </FadeInAnimation>
-                            )
-                        }
-                    </AnimatePresence>
+            <VStack align={"start"} spacing={0} w='100%' overflowY={"scroll"}>
+                <AnimatePresence>
+                    {
+                        isFirstComponentVisible && (
+                            <FadeInAnimation>
+                                <SectionHeader title="Last projects" />
+                            </FadeInAnimation>
+                        )
+                    }
+                </AnimatePresence>
 
-                    <Box h={{ base: "35px", sm: "50px" }} />
+                <Box h={{ base: "35px", sm: "50px" }} />
 
-                    <AnimatePresence>
-                        {
-                            isSecondComponentVisible ? (
-                                <Box overflowX={"hidden"} w="100%">
-                                    <ProjectCard project={projects[0]} />
-                                </Box>
-                            ) : <DummyProjectCard />
-                        }
-                    </AnimatePresence>
+                <AnimatePresence>
+                    {
+                        isSecondComponentVisible ? (
+                            <Box overflowX={"hidden"} w="100%">
+                                <ProjectCard project={projects[0]} />
+                            </Box>
+                        ) : <DummyProjectCard />
+                    }
+                </AnimatePresence>
 
-                    <Box h={{ base: "50px", sm: "160px" }}></Box>
+                <Box h={{ base: "50px", sm: "160px" }}></Box>
 
-                    <AnimatePresence>
-                        {
-                            isThirdComponentVisible ? (
-                                <Box overflowX={"hidden"} w="100%">
-                                    <ProjectCard project={projects[1]} />
-                                </Box>
-                            ) : <DummyProjectCard />
-                        }
-                    </AnimatePresence>
+                <AnimatePresence>
+                    {
+                        isThirdComponentVisible ? (
+                            <Box overflowX={"hidden"} w="100%">
+                                <ProjectCard project={projects[1]} />
+                            </Box>
+                        ) : <DummyProjectCard />
+                    }
+                </AnimatePresence>
 
-                    <Box h={{ base: "50px", sm: "160px" }} />
+                <Box h={{ base: "50px", sm: "160px" }} />
 
-                    <AnimatePresence>
-                        {
-                            isFourthComponentVisible ? (
-                                <Box overflowX={"hidden"} w="100%">
-                                    <ProjectCard project={projects[2]} />
-                                </Box>
-                            ) : <DummyProjectCard />
-                        }
-                    </AnimatePresence>
-                </VStack>
-            </Box>
-
+                <AnimatePresence>
+                    {
+                        isFourthComponentVisible ? (
+                            <Box overflowX={"hidden"} w="100%">
+                                <ProjectCard project={projects[2]} />
+                            </Box>
+                        ) : <DummyProjectCard />
+                    }
+                </AnimatePresence>
+            </VStack>
         </Box>
     )
 }

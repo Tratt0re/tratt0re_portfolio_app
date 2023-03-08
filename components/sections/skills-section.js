@@ -57,90 +57,83 @@ export default function SkillsSection() {
 
 
     return (
-        <Box
+        <Flex
+            ref={ref}
             id="skills"
             key="skills-section"
             minHeight={'100vh'}
-            scrollSnapAlign="start"
-            scrollSnapStop={"always"}
-            ref={ref}
+            alignItems='start'
+            flexDirection={"column"}
+            pt={"106px"}
+            css={{ '&::-webkit-scrollbar': { display: 'none' } }}
+            position={"relative"}
         >
-            <Flex
-                height={"100%"}
-                alignItems='start'
-                flexDirection={"column"}
-                pt={"106px"}
-                overflowY="scroll"
-                css={{ '&::-webkit-scrollbar': { display: 'none' } }}
-                position={"relative"}
+            <VStack
+                alignSelf={"start"}
+                align={"start"}
+                spacing={{ base: -2, sm: -2, md: -3, lg: -3, xl: -10 }}
+                w='100%'
+                pb={24}
             >
-                <VStack
-                    alignSelf={"start"}
-                    align={"start"}
-                    spacing={{ base: -2, sm: -2, md: -3, lg: -3, xl: -10 }}
-                    w='100%'
-                    pb={24}
-                >
-                    <AnimatePresence>
-                        {isFirstComponentVisible && (
-                            <FadeInAnimation>
-                                <SectionHeader title="Tech n' skills" />
-                            </FadeInAnimation>
-                        )}
-                    </AnimatePresence>
-
-                    <AnimatePresence>
-                        {isSecondComponentVisible && (
-                            <FadeInAnimation>
-                                <Text
-                                    fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "3xl", xl: "4xl" }}
-                                    pl={{ base: 5, sm: 5, md: 7, lg: 9, xl: 20 }}
-                                >
-                                    I'm a <HighlightText>versatile developer</HighlightText> with a wide range of skills and <HighlightText>expertise</HighlightText> in <HighlightText>various languages and tools</HighlightText>.
-                                    Continuously <HighlightText>up-to-date</HighlightText> with the <HighlightText>latest industry trends</HighlightText>.
-                                </Text>
-                            </FadeInAnimation>
-                        )}
-                    </AnimatePresence>
-                </VStack>
-
                 <AnimatePresence>
-                    {isThirdComponentVisible && (
-                        <Stack
-                            direction={{ base: "column", sm: "row" }}
-                            w="100%"
-                            px={{ base: 5, sm: 5, md: 10, lg: 16, xl: 24 }}
-                            spacing={{ base: 12, sm: 5, md: 16, lg: 20, xl: 36 }}
-                        >
-                            <SkillCard skill={skills[0]} direction="left" />
-
-                            <SkillCard skill={skills[1]} direction="right" />
-                        </Stack>
+                    {isFirstComponentVisible && (
+                        <FadeInAnimation>
+                            <SectionHeader title="Tech n' skills" />
+                        </FadeInAnimation>
                     )}
                 </AnimatePresence>
-                <Spacer />
+
                 <AnimatePresence>
-                    {isFourthComponentVisible && (
-                        <Text
-                            px={{ base: 0, sm: 0, md: 6, lg: 6, xl: 24 }}
-                            pb={16}
-                            opacity={0.8}
-                            fontSize={{ base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl" }}
-                        >
+                    {isSecondComponentVisible && (
+                        <FadeInAnimation>
                             <Text
-                                as="span"
-                                color={textColor}
-                                fontFamily="Roboto Mono"
-                                fontSize={{ base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl" }}
-                                fontWeight="bold"
+                                fontSize={{ base: "xl", sm: "2xl", md: "3xl", lg: "3xl", xl: "4xl" }}
+                                pl={{ base: 5, sm: 5, md: 7, lg: 9, xl: 20 }}
                             >
-                                *
+                                I'm a <HighlightText>versatile developer</HighlightText> with a wide range of skills and <HighlightText>expertise</HighlightText> in <HighlightText>various languages and tools</HighlightText>.
+                                Continuously <HighlightText>up-to-date</HighlightText> with the <HighlightText>latest industry trends</HighlightText>.
                             </Text>
-                            <TextTransitionAnimation text={"Expert at googling, master in avoid to reinvent the wheel"} />
-                        </Text>
+                        </FadeInAnimation>
                     )}
                 </AnimatePresence>
-            </Flex>
-        </Box>
+            </VStack>
+
+            <AnimatePresence>
+                {isThirdComponentVisible && (
+                    <Stack
+                        direction={{ base: "column", sm: "row" }}
+                        w="100%"
+                        px={{ base: 5, sm: 5, md: 10, lg: 16, xl: 24 }}
+                        spacing={{ base: 12, sm: 5, md: 16, lg: 20, xl: 36 }}
+                    >
+                        <SkillCard skill={skills[0]} direction="left" />
+
+                        <SkillCard skill={skills[1]} direction="right" />
+                    </Stack>
+                )}
+            </AnimatePresence>
+            <Spacer />
+            <AnimatePresence>
+                {isFourthComponentVisible && (
+                    <Text
+                        px={{ base: 0, sm: 0, md: 6, lg: 6, xl: 24 }}
+                        pb={16}
+                        opacity={0.8}
+                        fontSize={{ base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl" }}
+                    >
+                        <Text
+                            as="span"
+                            color={textColor}
+                            fontFamily="Roboto Mono"
+                            fontSize={{ base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl" }}
+                            fontWeight="bold"
+                        >
+                            *
+                        </Text>
+                        <TextTransitionAnimation text={"Expert at googling, master in avoid to reinvent the wheel"} />
+                    </Text>
+                )}
+            </AnimatePresence>
+        </Flex>
     )
 }

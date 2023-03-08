@@ -60,9 +60,7 @@ export default function Layout({ children }) {
             <Flex
                 flex="1"
                 direction="column"
-                overflowY="scroll"
-                scrollSnapType="y mandatory"
-                height="100vh"
+                minH="100vh"
                 maxW="100vw"
                 px={{ base: "4", sm: "12" }}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}

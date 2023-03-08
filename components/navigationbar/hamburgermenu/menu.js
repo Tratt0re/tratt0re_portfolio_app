@@ -12,7 +12,7 @@ export default function Menu({ isOpen, onClose }) {
         <AnimatePresence>
             {isOpen && (
                 <Box
-                    position="absolute"
+                    position="fixed"
                     bottom={0}
                     left={0}
                     right={0}
