@@ -37,14 +37,14 @@ export default function AboutMeSection() {
             key="aboutme-section"
             minHeight={'100vh'}
             scrollSnapAlign="start"
-            scrollSnapStop={"always"}
             ref={ref}
         >
             <Box
-                pt={"106px"}
-                pb={"52px"}
                 height={'100%'}
+                pt={{ base: "10px", md: "0px" }}
+                pb={{ base: "256px", sm: "206px", md: "56px" }}
                 overflowY="scroll"
+                scrollBehavior={"smooth"}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}
             >
                 <VStack align={"start"} spacing={0}>
@@ -66,7 +66,7 @@ export default function AboutMeSection() {
                                     When I'm not busy typing away at my keyboard, you can often find me experimenting with new recipes in the kitchen or reading sci-fi books.
                                     <br />
                                     <br />
-                                    I've had a <HighlightText>love</HighlightText> for all things tech since I was child, 
+                                    I've had a <HighlightText>love</HighlightText> for all things tech since I was child,
                                     and I've always been fascinated by the ever-evolving world of <HighlightText>software development</HighlightText>.
                                     This fasciantion bringed me to attend the <HighlightText>Apple Developer Academy</HighlightText>, and sice then, dedicate my work life to <HighlightText>produce quality Apps</HighlightText>.
                                     <br />

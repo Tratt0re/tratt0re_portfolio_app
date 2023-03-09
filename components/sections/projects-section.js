@@ -59,13 +59,14 @@ export default function ProjectsSection() {
             key="projects-section"
             height={'100vh'}
             scrollSnapAlign="start"
-            scrollSnapStop={"always"}
             ref={ref}
         >
             <Box
-                py={"106px"}
                 height={'100%'}
+                pt={{ base: "10px", md: "0px" }}
+                pb={{base: "206px", sm: "106px"}}
                 overflowY="scroll"
+                scrollBehavior={"smooth"}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}
             >
                 <VStack align={"start"} spacing={0} w='100%' overflowY={"scroll"}>

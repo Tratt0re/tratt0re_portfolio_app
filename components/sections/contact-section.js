@@ -65,18 +65,19 @@ export default function ContactSection() {
             key="contact-section"
             minHeight={'100vh'}
             scrollSnapAlign="start"
-            scrollSnapStop={"always"}
             ref={ref}
         >
             <Flex
                 height={"100%"}
+                pt={{ base: "10px", md: "0px" }}
+                pb={{ base: "106px", md: "56px" }}
                 alignItems='start'
                 flexDirection={"column"}
-                pt={"106px"}
                 overflowY="scroll"
+                scrollBehavior={"smooth"}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}
             >
-                <VStack align={"start"} spacing={0}>
+                <VStack align={"start"} spacing={0} pb={16}>
                     <AnimatePresence>
                         {isFirstComponentVisible && (
                             <FadeInAnimation>
@@ -97,9 +98,6 @@ export default function ContactSection() {
                         )}
                     </AnimatePresence>
                 </VStack>
-
-
-                <Spacer />
 
                 <AnimatePresence>
                     {isThirdComponentVisible && (
@@ -143,7 +141,7 @@ export default function ContactSection() {
                     <AnimatePresence>
                         {isFourthComponentVisible && (
                             <FadeInAnimation style={{ width: custoButtonPercenWidth }}>
-                                <CustomButton label="Send me an email" icon={<FaEnvelopeSquare />} href="mailto:salvatoredeluca@aol.com" />
+                                <CustomButton label="Send me an email" icon={<FaEnvelopeSquare />} href="mailto:salvatoredeluca@aol.it" />
                             </FadeInAnimation>
                         )}
                     </AnimatePresence>
@@ -151,8 +149,6 @@ export default function ContactSection() {
 
 
                 <Spacer />
-                <Spacer />
-
                 <Footer />
             </Flex>
         </Box>

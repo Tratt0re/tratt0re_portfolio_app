@@ -62,15 +62,16 @@ export default function SkillsSection() {
             key="skills-section"
             minHeight={'100vh'}
             scrollSnapAlign="start"
-            scrollSnapStop={"always"}
             ref={ref}
         >
             <Flex
                 height={"100%"}
+                pt={{ base: "10px", md: "0px" }}
+                pb={{ base: "106px", md: "56px" }}
                 alignItems='start'
                 flexDirection={"column"}
-                pt={"106px"}
                 overflowY="scroll"
+                scrollBehavior={"smooth"}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}
                 position={"relative"}
             >
@@ -79,7 +80,7 @@ export default function SkillsSection() {
                     align={"start"}
                     spacing={{ base: -2, sm: -2, md: -3, lg: -3, xl: -10 }}
                     w='100%'
-                    pb={24}
+                    pb={{ base: 5, md: 12 }}
                 >
                     <AnimatePresence>
                         {isFirstComponentVisible && (
@@ -123,7 +124,6 @@ export default function SkillsSection() {
                     {isFourthComponentVisible && (
                         <Text
                             px={{ base: 0, sm: 0, md: 6, lg: 6, xl: 24 }}
-                            pb={16}
                             opacity={0.8}
                             fontSize={{ base: "md", sm: "md", md: "xl", lg: "3xl", xl: "4xl" }}
                         >
@@ -140,6 +140,7 @@ export default function SkillsSection() {
                         </Text>
                     )}
                 </AnimatePresence>
+                <Spacer />
             </Flex>
         </Box>
     )

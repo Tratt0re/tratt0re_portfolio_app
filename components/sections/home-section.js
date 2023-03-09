@@ -48,15 +48,15 @@ export default function HomeSection() {
             key="home-section"
             minHeight={'100vh'}
             scrollSnapAlign="start"
-            scrollSnapStop={"always"}
         >
             <Flex
                 height={"100%"}
                 alignItems='start'
                 flexDirection={"column"}
-                pt={"106px"}
-                pb={"53px"}
+                pt={{base: "76px", md: "106px"}}
+                pb={{base: "156px", md: "56px"}}
                 overflowY="scroll"
+                scrollBehavior={"smooth"}
                 css={{ '&::-webkit-scrollbar': { display: 'none' } }}
             >
 

@@ -3,6 +3,7 @@ import { useEffect, useState } from "react";
 import NavigationBar from "./navigationbar/navigationbar";
 import Menu from "./navigationbar/hamburgermenu/menu";
 import Head from "next/head";
+import Footer from "./other/footer";
 
 export default function Layout({ children }) {
 
@@ -62,6 +63,7 @@ export default function Layout({ children }) {
                 direction="column"
                 overflowY="scroll"
                 scrollSnapType="y mandatory"
+                scrollPaddingTop={{ base: "64px", sm: "56px" }}
                 height="100vh"
                 maxW="100vw"
                 px={{ base: "4", sm: "12" }}
