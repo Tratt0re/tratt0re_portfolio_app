@@ -29,7 +29,7 @@ export default function NavigationBarHeaderText({ text }) {
                         variants={variants}
                     >
                         <Box boxSize={"32px"}>
-                            <Image src={useColorModeValue("/images/tratt0re_light.png", "/images/tratt0re_dark.png")} alt="tratt0re icon" />
+                            <Image src={useColorModeValue("../public/images/tratt0re_light.png", "../public/images/tratt0re_dark.png")} alt="tratt0re icon" />
                         </Box>
                     </motion.div>
 
